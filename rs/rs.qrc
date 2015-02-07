@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/sys">
+        <file>img/sf.jpg</file>
+        <file>img/check.png</file>
+        <file>img/top.png</file>
+        <file>img/keyborad.png</file>
+    </qresource>
+</RCC>
