@@ -1,8 +1,13 @@
 #QQLikeUI
 qt版本：5.3.2 编译器：mingw32
 
-目前只实现了登录窗口，后续版本会增加主窗体、聊天界面等。
-几乎是用纯qss实现全部界面小特效
+登录窗体与主窗体已经部分实现，窗体目前还不能自由改变大小，但是可以随意拖动。
 
-运行效果如下，左边为原版，右边为“山寨”：
+
+主界面对比，左边为原版，右边为“山寨”：
+
+![](http://git.oschina.net/kyyblabla/QQLikeUI/raw/master/%E5%AF%B9%E6%AF%94%E5%9B%BE2.png)
+
+
+登录窗口对比，左边为原版，右边为“山寨”：
 ![](http://git.oschina.net/kyyblabla/QQLikeUI/raw/master/%E8%BF%90%E8%A1%8C%E5%AF%B9%E6%AF%94.jpg)
