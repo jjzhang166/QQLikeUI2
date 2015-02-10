@@ -14,13 +14,30 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    src/ui/loginform.cpp
+    src/ui/loginform.cpp \
+    src/ui/collapseview.cpp \
+    src/ui/collapseviewitem.cpp \
+    src/ui/litteriem.cpp \
+    #src/ui/slidewindow.cpp \
+    src/ui/moveableframelesswindow.cpp \
+    src/ui/mainform.cpp
 
 HEADERS  += mainwindow.h \
-    src/ui/loginform.h
+    src/ui/loginform.h \
+    src/ui/collapseview.h \
+    src/ui/collapseviewitem.h \
+    src/ui/litteriem.h \
+    #src/ui/slidewindow.h \
+    src/ui/moveableframelesswindow.h \
+    src/ui/mainform.h
 
 FORMS    += mainwindow.ui \
-    src/ui/loginform.ui
+    src/ui/loginform.ui \
+    src/ui/collapseview.ui \
+    src/ui/collapseviewitem.ui \
+    src/ui/litteriem.ui \
+    #src/ui/slidewindow.ui \
+    src/ui/mainform.ui
 
 RESOURCES += \
     rs/rs.qrc

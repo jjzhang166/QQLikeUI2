@@ -2,6 +2,8 @@
 #include "ui_loginform.h"
 
 
+#include "mainform.h"
+
 #include <windows.h>
 
 #include <QKeyEvent>
@@ -10,14 +12,17 @@
 #include <QPoint>
 #include <QGridLayout>
 
+
 LoginForm::LoginForm(QWidget *parent) :
-    QWidget(parent),
+    MoveableFramelessWindow(parent),
     ui(new Ui::LoginForm)
 {
     ui->setupUi(this);
 
-    this->setWindowFlags(Qt::FramelessWindowHint);
-    setAttribute(Qt::WA_TranslucentBackground);
+
+
+    //关联登录按钮点击
+    connect(ui->pushButton_login,SIGNAL(clicked()),this,SLOT(doLoginButClick()));
 
 }
 
@@ -26,16 +31,18 @@ LoginForm::~LoginForm()
     delete ui;
 }
 
-void LoginForm::mousePressEvent(QMouseEvent *event)
+QWidget *LoginForm::getDragnWidget()
 {
-    //判断位置
-    QRect rect=ui->login_top_widget->rect();
-    QPoint pos=event->pos();
-    bool shouldMove=pos.x()>=rect.left()&&pos.x()<=rect.right()&&pos.y()>=rect.top()&&pos.y()<=rect.bottom();
-    if(shouldMove){
-        if (ReleaseCapture()){
-            SendMessage(HWND(this->winId()), WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
-        }
-    }
-    event->ignore();
+    return ui->login_top_widget;
+}
+
+
+
+void LoginForm::doLoginButClick()
+{
+
+    MainForm*m=new MainForm;
+    m->show();
+    this->hide();
+
 }
