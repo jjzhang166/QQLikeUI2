@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>QQ</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../rs/rs.qrc">
@@ -100,10 +100,6 @@ QScrollBar::sub-page:vertical {
  
 /*滚动条样式定义结束*/
 
-#main_widget{
-	
-	border-image: url(:/sys/back.png) 5;
-}
 
 </string>
   </property>
@@ -129,6 +125,7 @@ QScrollBar::sub-page:vertical {
 
 #main_widget{
 	border-radius:2px;
+	border-image: url(:/sys/back.png) 5;
 }
 
 #centralwidget{
@@ -502,19 +499,43 @@ QLineEdit#search{
                 </widget>
                </item>
                <item>
-                <widget class="QWidget" name="widget_3" native="true">
+                <widget class="QWidget" name="wether_widget" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>50</width>
-                   <height>50</height>
+                   <width>55</width>
+                   <height>55</height>
                   </size>
                  </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>50</width>
-                   <height>50</height>
-                  </size>
-                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="label">
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="pixmap">
+                     <pixmap resource="../../rs/rs.qrc">:/media/wether/media/wether/3.png</pixmap>
+                    </property>
+                    <property name="scaledContents">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
               </layout>

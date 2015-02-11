@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>登陆QQ</string>
   </property>
   <property name="windowIcon">
    <iconset resource="../../rs/rs.qrc">

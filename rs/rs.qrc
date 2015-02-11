@@ -8,7 +8,6 @@
         <file>arrow_d.png</file>
         <file>arrow_r.png</file>
         <file>arrow_r_g.png</file>
-        <file>popup_bg_all.png</file>
         <file>back.png</file>
         <file>qlogo.png</file>
         <file>qqicon_p_blue.png</file>
@@ -22,6 +21,7 @@
         <file>qq_tool_talk.png</file>
         <file>qq_tool_zone.png</file>
         <file>level.png</file>
+        <file>color_panle.png</file>
     </qresource>
     <qresource prefix="/media/qun">
         <file>media/qun/1.png</file>
@@ -38,5 +38,10 @@
         <file>media/person/6.jpg</file>
         <file>media/person/7.jpg</file>
         <file>media/person/8.jpg</file>
+    </qresource>
+    <qresource prefix="/media/wether">
+        <file>media/wether/1.png</file>
+        <file>media/wether/2.png</file>
+        <file>media/wether/3.png</file>
     </qresource>
 </RCC>

@@ -34,6 +34,9 @@ protected:
      */
      bool isPointInDragnWidget(const QWidget*widget,const QPoint &point);
 
+protected slots:
+     //主题改变
+     virtual void onThemeColorChange(QString colorStr){}
 signals:
 
 public slots:

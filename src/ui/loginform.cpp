@@ -19,8 +19,6 @@ LoginForm::LoginForm(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
-
     //关联登录按钮点击
     connect(ui->pushButton_login,SIGNAL(clicked()),this,SLOT(doLoginButClick()));
 

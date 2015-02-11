@@ -21,7 +21,7 @@ public:
 private slots:
 
     void doChangeColor();
-
+    void onThemeColorChange(QString colorStr);
 protected:
       QWidget*getDragnWidget();
 private:

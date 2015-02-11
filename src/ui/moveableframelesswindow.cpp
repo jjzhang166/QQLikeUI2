@@ -23,9 +23,7 @@ MoveableFramelessWindow::MoveableFramelessWindow(QWidget *parent) :
 
 void MoveableFramelessWindow::mousePressEvent(QMouseEvent *event)
 {
-
     //判断位置
-
     bool shouldMove=isPointInDragnWidget(getDragnWidget(),event->pos());
 
     if(shouldMove){
