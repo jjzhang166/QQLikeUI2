@@ -4,12 +4,6 @@
 
 #include "mainform.h"
 
-#include <windows.h>
-
-#include <QKeyEvent>
-#include <QMouseEvent>
-#include <QRect>
-#include <QPoint>
 #include <QGridLayout>
 
 

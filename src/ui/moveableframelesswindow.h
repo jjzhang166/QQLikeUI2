@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
+#include <QPoint>
 /**
  * @brief 无边框窗体
  */
@@ -14,10 +15,22 @@ public:
 
 protected:
     /**
-     * @brief 鼠标拖动窗体
+     * @brief 鼠标按下，准备拖动窗体
      * @param event
      */
     void mousePressEvent(QMouseEvent *event);
+
+    /**
+    * @brief 鼠标移动，处理窗体拖动
+    * @param event
+    */
+   void mouseMoveEvent(QMouseEvent *event);
+
+   /**
+    * @brief 释放鼠标
+    * @param event
+    */
+   void mouseReleaseEvent(QMouseEvent *event);
 
 
     /**
@@ -34,6 +47,15 @@ protected:
      */
      bool isPointInDragnWidget(const QWidget*widget,const QPoint &point);
 
+     /**
+      * @brief 标志是否移动窗体
+      */
+     bool isMove;
+
+     /**
+       * @brief 鼠标按下去的点
+       */
+      QPoint pressedPoint;
 protected slots:
      //主题改变
      virtual void onThemeColorChange(QString colorStr){}

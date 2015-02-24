@@ -1,8 +1,6 @@
 #include "moveableframelesswindow.h"
 
 
-#include <windows.h>
-
 #include <QKeyEvent>
 #include <QMouseEvent>
 #include <QRect>
@@ -11,7 +9,8 @@
 
 
 MoveableFramelessWindow::MoveableFramelessWindow(QWidget *parent) :
-    QWidget(parent)
+    QWidget(parent),
+    isMove(false)
 {
     //设置窗体为无边框
     this->setWindowFlags(Qt::FramelessWindowHint);
@@ -27,12 +26,28 @@ void MoveableFramelessWindow::mousePressEvent(QMouseEvent *event)
     bool shouldMove=isPointInDragnWidget(getDragnWidget(),event->pos());
 
     if(shouldMove){
-        if (ReleaseCapture()){
-            SendMessage(HWND(this->winId()), WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
-        }
+          pressedPoint=event->pos();
+          isMove=true;
     }
 
     event->ignore();
+
+}
+
+void MoveableFramelessWindow::mouseMoveEvent(QMouseEvent *event)
+{
+    if((event->buttons()==Qt::LeftButton) && isMove==true){
+
+            QPoint currPoint=this->pos();
+            currPoint.setX(currPoint.x()+event->x()-pressedPoint.x());
+            currPoint.setY(currPoint.y()+event->y()-pressedPoint.y());
+            this->move(currPoint);
+     }
+}
+
+void MoveableFramelessWindow::mouseReleaseEvent(QMouseEvent *event)
+{
+    isMove=false;
 
 }
 
